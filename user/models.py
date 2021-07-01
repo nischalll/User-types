@@ -7,7 +7,7 @@ from django.db.models import CharField
 class CustomUser(AbstractUser):
     first_name=CharField(max_length=50)
     last_name=CharField(max_length=50)
-    email = CharField(max_length=50)
+    
     profile = models.ImageField( default='path/to/my/default/image.jpg')
     age = models.PositiveIntegerField(null=True, blank=True)
     is_patient = models.BooleanField(default='True')

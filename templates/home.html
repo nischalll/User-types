@@ -4,28 +4,61 @@
 {% block content %}
 
 {% if user.is_authenticated and user.is_patient %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/1600x900/?doctor,patient" class="d-block w-100" alt="...">
+    </div>
+</div>
 <div class="container">
-<h1>This is dashboard for patient</h1>
-Hello Mr.{{user.first_name }}!
-<p>
-<a href="{% url 'logout' %}" class="btn btn-primary">Log Out</a>
+<div class ="container-fluid my-3">
+<div class="jumbotron ">
+<h1 class="display-4 ">User-Types app</h1>
+<p class="lead">A User-Types website built with Django.</p>
+<p class="lead">
+<a class="btn btn-primary btn-lg" href="{% url 'article_list' %}"
+role="button">View All Articles</a>
 </p>
+<hr>
+</div>
+</div>
 </div>
 
 {% elif user.is_authenticated and  not user.is_patient %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/1600x900/?doctor,patient" class="d-block w-100" alt="...">
+    </div>
+</div>
 <div class="container">
-<h1>This is dashboard for doctor</h1>
-Hello Dr.{{user.first_name }}!
-<p><a href="{% url 'logout' %}" class="btn btn-primary">Log Out</a>
+<div class ="container-fluid my-3">
+<div class="jumbotron ">
+<h1 class="display-4 ">User-Types app</h1>
+<p class="lead">A User-Types website built with Django.</p>
+<p class="lead">
+<a class="btn btn-primary btn-lg" href="{% url 'article_list' %}"
+role="button">View All Articles</a>
 </p>
+<hr>
+</div>
+</div>
 </div>
 
 {% else %}
-<div class="container">
-<h1>You are not logged in</h1>
-<a href="{% url 'login' %}" class="btn btn-primary">Log In</a> |
-<a href="{% url 'signup' %}" class="btn btn-primary">Sign Up</a>
-
+<div class="container my-3">
+<div class="alert alert-primary" role="alert">
+  You are not logged in!
+</div>
+</div>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/1600x900/?doctor,patient" class="d-block w-100" alt="...">
+        <div class= "container-fluid my-3"><p><h1>Where does it come from?</h1>
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+    </div>
 </div>
 {% endif %}
 

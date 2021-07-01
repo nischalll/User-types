@@ -37,8 +37,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 3rd Party
+    #'crispy_forms', 
+
+    # Local
     'user.apps.UserConfig',
+    'pages.apps.PagesConfig',
+    'articles.apps.ArticlesConfig',
 ]
+
+TIME_ZONE = 'Asia/Kolkata' # new
 
 AUTH_USER_MODEL = 'user.CustomUser'
 
@@ -124,3 +133,10 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
