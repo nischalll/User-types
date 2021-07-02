@@ -17,7 +17,7 @@ class Article(models.Model):
     body = models.TextField()
     summary = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(blank=True, null = True)
+    image = models.ImageField(null=True, blank = True, upload_to ="images/")
     author = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,
