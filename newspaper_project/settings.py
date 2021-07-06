@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 3rd Party
-    #'crispy_forms', 
+    # 'crispy_forms',
 
     # Local
     'user.apps.UserConfig',
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'articles.apps.ArticlesConfig',
 ]
 
-TIME_ZONE = 'Asia/Kolkata' # new
+TIME_ZONE = 'Asia/Kolkata'  # new
 
 AUTH_USER_MODEL = 'user.CustomUser'
 
@@ -87,8 +87,12 @@ WSGI_APPLICATION = 'newspaper_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sample',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': '1234',
     }
 }
 
@@ -139,4 +143,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

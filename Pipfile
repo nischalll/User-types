@@ -8,6 +8,8 @@ django = "==3.1.6"
 pillow = "*"
 django-crispy-forms = "==1.7.2"
 gunicorn = "==19.9.0"
+mysql = "*"
+mysqlclient = "*"
 
 [dev-packages]
 
