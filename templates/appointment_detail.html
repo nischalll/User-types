@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class= "container-fluid my-3">
+    <h1>Appointment scheduled sucessfully</h1>
+    <hr>
+    <h2>{{ object.Full_Name }}</h2>
+    <p>At {{ object.schedule }} | {{ object.date }}</p>
+    <p>{{ object.doctor }}</p>
+<p>Back to <a href="{% url 'book_appointment' %}">All Appointments</a>.</p>
+
+</div>
+{% endblock content %}

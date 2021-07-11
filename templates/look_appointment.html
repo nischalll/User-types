@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<div class="container-fluid my-3">
+<h1>appointments</h1>
+<hr>
+</div>
+
+{% for appointment in object_list %}
+<div class="container-fluid my-3">
+<p><strong>patient name: </strong>{{ appointment.Full_Name}}</p>
+<p><strong>appointment time: </strong>{{ appointment.schedule}}</p>
+<p><strong>doctor: </strong>{{ appointment.doctor}}</p>
+<hr>
+</div>}
+{% endfor %}
+{% endblock content %}

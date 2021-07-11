@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}book appointment{% endblock title %}
+{% block content %}
+<div class="container-fluid my-3">
+<h1>book appointments</h1>
+<form method="post" >
+{% csrf_token %}
+{{ form.as_p }}
+<button class="btn btn-success ml-2" type="submit">Book</button>
+</form>
+</div>
+
+{% endblock content %}

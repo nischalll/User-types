@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'pages.apps.PagesConfig',
     'articles.apps.ArticlesConfig',
+    'appointment.apps.AppointmentConfig',
 ]
 
 TIME_ZONE = 'Asia/Kolkata'  # new
