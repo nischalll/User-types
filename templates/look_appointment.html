@@ -7,11 +7,14 @@
 </div>
 
 {% for appointment in object_list %}
+{%ifequal appointment.doctor|stringformat:"s" user.username %}
 <div class="container-fluid my-3">
 <p><strong>patient name: </strong>{{ appointment.Full_Name}}</p>
 <p><strong>appointment time: </strong>{{ appointment.schedule}}</p>
+<p><strong>date: </strong>{{ appointment.date}}</p>
 <p><strong>doctor: </strong>{{ appointment.doctor}}</p>
 <hr>
-</div>}
+</div>
+{% endifequal %}
 {% endfor %}
 {% endblock content %}

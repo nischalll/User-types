@@ -14,9 +14,11 @@ class Schedule(models.Model):
 
 class Doctor(models.Model):
     doctor = models.CharField(max_length=30)
-
+   
     def __str__(self):
         return self.doctor
+
+
 
 
 class Appointment(models.Model):
@@ -24,6 +26,7 @@ class Appointment(models.Model):
     schedule = models.ForeignKey(Schedule, on_delete=CASCADE)
     date = models.DateField()
     doctor = models.ForeignKey(Doctor, on_delete=CASCADE)
+    #speciality = models.ForeignKey(Speciality, on_delete=CASCADE)
 
 
     def __str__(self):

@@ -11,7 +11,7 @@ class AppointmentView(ListView):
 class BookAppointmentView(CreateView):
     model = Appointment
     template_name = 'book_appointment.html'
-    fields = ('Full_Name', 'schedule', 'doctor', 'date')
+    fields = ('Full_Name', 'schedule', 'doctor', 'date',)
 
 class LookAppointmentView(ListView):
     model = Appointment
